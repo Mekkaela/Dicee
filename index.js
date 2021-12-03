@@ -5,8 +5,9 @@ document.addEventListener('load', function(event){
 function diceReload(){
   var player1 = Math.floor(Math.random() * 6) + 1;
   var player2 = Math.floor(Math.random() * 6) + 1;
+  document.getElementById('img1').src = 'images/dice'+player1+'.png';
+  document.getElementById('img2').src = 'images/dice'+player2+'.png';
   Winner(player1, player2);
-  ReloadDice(player1, player2);
 }
 
 function Winner(player1, player2){
@@ -17,10 +18,5 @@ function Winner(player1, player2){
   }else {
     document.querySelector(".displayText").innerText = "Draw!";
   }
-}
-
-function ReloadDice(player1, player2){
-  document.getElementById('img1').src = 'images/dice'+p1+'.png';
-  document.getElementById('img2').src = 'images/dice'+p2+'.png';
 }
 
